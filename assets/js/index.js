@@ -6,7 +6,11 @@ const listaTareas = document.querySelector("#listaTareas");
 const totalTareas = document.querySelector("#totalTareas");
 const tareasRealizadas = document.querySelector("#tareasRealizadas");
 
-let tareas = [];
+let tareas = [
+  { id: 1, descripcion: "Estudiar JavaScript", completado: false },
+  { id: 2, descripcion: "Preparar café", completado: true },
+  { id: 3, descripcion: "Leer el desafío", completado: false },
+];
 
 // Función para render
 function renderizarTareas() {
