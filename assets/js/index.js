@@ -1,3 +1,5 @@
+//agregar const de los html
+
 const inputTarea = document.querySelector("#inputTarea");
 const btnAgregar = document.querySelector("#btnAgregar");
 const listaTareas = document.querySelector("#listaTareas");
@@ -6,7 +8,7 @@ const tareasRealizadas = document.querySelector("#tareasRealizadas");
 
 let tareas = [];
 
-// Función para renderizar las tareas
+// Función para render
 function renderizarTareas() {
   listaTareas.innerHTML = "";
 
@@ -30,7 +32,7 @@ function renderizarTareas() {
   totalTareas.textContent = tareas.length;
   tareasRealizadas.textContent = tareas.filter((t) => t.completado).length;
 
-  // Eventos: cambiar estado y eliminar
+  //  cambiar estado y eliminar
   document.querySelectorAll(".btn-cambiar").forEach((btn) => {
     btn.addEventListener("click", () => {
       const id = Number(btn.getAttribute("data-id"));
@@ -66,5 +68,4 @@ btnAgregar.addEventListener("click", () => {
   renderizarTareas();
 });
 
-// Render inicial con las 3 tareas
 renderizarTareas();
